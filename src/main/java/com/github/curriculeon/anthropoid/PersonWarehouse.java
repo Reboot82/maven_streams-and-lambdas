@@ -81,7 +81,10 @@ public final class PersonWarehouse implements Iterable<Person> {
      * @return Stream of Stream of Aliases
      */ // TODO
     public Stream<Stream<String>> getNestedAliases() {
-        return null;
+
+         return people
+                 .stream()
+                 .map(person -> Stream.of(person.getAliases()));
     }
 
 
@@ -89,7 +92,10 @@ public final class PersonWarehouse implements Iterable<Person> {
      * @return Stream of all Aliases
      */ // TODO
     public Stream<String> getAllAliases() {
-        return null;
+
+        return people
+                .stream()
+                .flatMap(person -> Stream.of(person.getAliases()));
     }
 
     // DO NOT MODIFY

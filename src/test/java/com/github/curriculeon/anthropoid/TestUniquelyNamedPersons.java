@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -45,7 +46,7 @@ public class TestUniquelyNamedPersons {
     @Test
     public void testGetFirstNUniquelyNamedPeople() {
         // : Given
-        Integer valueOfN = 4;
+        Integer valueOfN = 1;
 
         // when
         List<String> actual = warehouse
