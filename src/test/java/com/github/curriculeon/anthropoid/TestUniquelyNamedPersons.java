@@ -56,7 +56,7 @@ public class TestUniquelyNamedPersons {
 
         // then
         List<String> uniqueNameDerivation = this.deriveUniqueNames(warehouse);
-        List<String> expected = uniqueNameDerivation.subList(0, valueOfN);
+        List<String> expected = uniqueNameDerivation.subList(0, valueOfN-1);
         Assert.assertEquals(expected.toString(), actual.toString());
     }
 
