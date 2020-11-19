@@ -46,7 +46,7 @@ public class TestUniquelyNamedPersons {
     @Test
     public void testGetFirstNUniquelyNamedPeople() {
         // : Given
-        Integer valueOfN = 1;
+        Integer valueOfN = 0;
 
         // when
         List<String> actual = warehouse
@@ -56,7 +56,7 @@ public class TestUniquelyNamedPersons {
 
         // then
         List<String> uniqueNameDerivation = this.deriveUniqueNames(warehouse);
-        List<String> expected = uniqueNameDerivation.subList(0, valueOfN-1);
+        List<String> expected = uniqueNameDerivation.subList(0, valueOfN);
         Assert.assertEquals(expected.toString(), actual.toString());
     }
 
